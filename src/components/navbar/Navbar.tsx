@@ -1,12 +1,15 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
 const Navbar = () => {
   const pathname = usePathname();
+  const router = useRouter();
   console.log(pathname);
-
+  const handleClick = () => {
+    router.refresh();
+  };
   const navs = [
     { title: "home", link: "/" },
     { title: "about", link: "/about" },
@@ -30,6 +33,12 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        <button
+          onClick={handleClick}
+          className="bg-blue-500 text-white px-6 py-2 rounded"
+        >
+          Click
+        </button>
       </nav>
     </div>
   );
