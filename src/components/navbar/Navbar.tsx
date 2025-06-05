@@ -13,6 +13,7 @@ const Navbar = () => {
   const navs = [
     { title: "home", link: "/" },
     { title: "about", link: "/about" },
+    { title: "Contact Us", link: "/about/contact-us" },
   ];
   return (
     <div className="p-4 border-b ">
