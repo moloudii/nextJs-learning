@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import React from "react";
 import Counter from "./component/counter";
 import ServerComp from "./component/serverComp";
-import axios from "axios";
 
 export const metadata: Metadata = {
   title: "About Page",
@@ -21,7 +20,10 @@ export interface Rating {
   count: number;
 }
 const about = async () => {
-  const { data } = await axios.get("https://fakestoreapi.com/products");
+  const result = await fetch("http://localhost:3000/products", {
+    cache: "force-cache",
+  });
+  const data = await result.json();
   console.log(data);
 
   return (
