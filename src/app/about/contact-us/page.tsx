@@ -18,7 +18,6 @@ const ContactUs = () => {
       {products.map((item: IGetProduct) => (
         <div key={item.id} className="bg-slate-600 mb-2">
           <h5>{item.title}</h5>
-          {/* <p>{item.description}</p> */}
         </div>
       ))}
     </div>
