@@ -21,7 +21,9 @@ export interface Rating {
 }
 const about = async () => {
   const result = await fetch("http://localhost:3000/products", {
-    cache: "force-cache",
+    next: {
+      revalidate: 10,
+    },
   });
   const data = await result.json();
   console.log(data);
