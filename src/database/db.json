@@ -1,6 +1,19 @@
 {
   "products": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": 0.48194880816010677,
+      "title": "test title",
+      "views": 200
+    }
   ]
 }
